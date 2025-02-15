@@ -274,7 +274,7 @@ The IP address of """ + machine + """ has changed:\nOld external IP = """ + old_
 def trigger_azure_function(filepath, ip_address, named_location):
     # Replace with your Azure Function URL
     url = "https://ccesfunctionpubliceastus.azurewebsites.net/api/executePSScriptUponHTTPEvent"
-    appkey = "kIw0FTqfl1WODL6aCfYgvRNP3qBox2l7Jz5BtZ4tS7-aAzFuood0UQ=="
+    appke[y] = "kIw0FTqfl1WODL6aCfYgvRNP3qBox2l7Jz5BtZ4tS7-aAzFuood0UQ=="
 
     # Define the headers for the HTTP request
     headers = {
