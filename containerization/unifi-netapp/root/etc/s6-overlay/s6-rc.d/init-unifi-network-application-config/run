@@ -1,0 +1,72 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+# create our folders
+mkdir -p \
+    /config/{data,logs}
+
+# create symlinks for config
+symlinks=( \
+/usr/lib/unifi/data \
+/usr/lib/unifi/logs )
+
+for i in "${symlinks[@]}"; do
+    if [[ -L "$i" && ! "$i" -ef /config/"$(basename "$i")"  ]]; then
+        unlink "$i"
+    fi
+    if [[ ! -L "$i" ]]; then
+        ln -s /config/"$(basename "$i")" "$i"
+    fi
+done
+
+if [[ ! -e /config/data/system.properties ]]; then
+    if [[ -z "${MONGO_HOST}" ]]; then
+        echo "*** No MONGO_HOST set, cannot configure database settings. ***"
+        sleep infinity
+    else
+        echo "*** Waiting for MONGO_HOST ${MONGO_HOST} to be reachable. ***"
+        DBCOUNT=0
+        while true; do
+            if nc -w1 "${MONGO_HOST}" "${MONGO_PORT}" >/dev/null 2>&1; then
+                break
+            fi
+            DBCOUNT=$((DBCOUNT+1))
+            if [[ ${DBCOUNT} -gt 6 ]]; then
+                echo "*** Defined MONGO_HOST ${MONGO_HOST} is not reachable, cannot proceed. ***"
+                sleep infinity
+            fi
+            sleep 5
+        done
+        sed -i "s/~MONGO_USER~/${MONGO_USER}/" /defaults/system.properties
+        sed -i "s/~MONGO_HOST~/${MONGO_HOST}/" /defaults/system.properties
+        sed -i "s/~MONGO_PORT~/${MONGO_PORT}/" /defaults/system.properties
+        sed -i "s/~MONGO_DBNAME~/${MONGO_DBNAME}/" /defaults/system.properties
+        sed -i "s/~MONGO_PASS~/${MONGO_PASS}/" /defaults/system.properties
+        if [[ "${MONGO_TLS,,}" = "true" ]]; then
+            sed -i "s/~MONGO_TLS~/true/" /defaults/system.properties
+        else
+            sed -i "s/~MONGO_TLS~/false/" /defaults/system.properties
+        fi
+        if [[ -z "${MONGO_AUTHSOURCE}" ]]; then
+            sed -i "s/~MONGO_AUTHSOURCE~//" /defaults/system.properties
+        else
+            sed -i "s/~MONGO_AUTHSOURCE~/\&authSource=${MONGO_AUTHSOURCE}/" /defaults/system.properties
+        fi
+        cp /defaults/system.properties /config/data
+    fi
+fi
+
+# generate key
+if [[ ! -f /config/data/keystore ]]; then
+    keytool -genkey -keyalg RSA -alias unifi -keystore /config/data/keystore \
+    -storepass aircontrolenterprise -keypass aircontrolenterprise -validity 3650 \
+    -keysize 4096 -dname "cn=unifi" -ext san=dns:unifi
+fi
+
+# permissions
+lsiown -R abc:abc \
+	/config \
+	/run/unifi
+
+lsiown abc:abc \
+    /config/data/keystore

@@ -1,0 +1,35 @@
+#version: "3"
+networks:
+  unifi:
+    external: true
+# More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
+services:
+  pihole:
+    container_name: copine-pihole01test
+    domainname: cantrellcloud.net
+    image: pihole/pihole:latest
+    hostname: copine-pihole01test
+      networks:
+        unifi:
+        ipv4_address: 10.0.69.231
+    # For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      #- "67:67/udp" # Only required if you are using Pi-hole as your DHCP server
+      - "80:80/tcp"
+    environment:
+      TZ: 'America/New York'
+      WEBPASSWORD: 'S1airarose!895'
+      ServerIP: 10.0.69.231
+      VIRTUAL_PORT: 80
+    # Volumes store your data between container upgrades
+    volumes:
+      # - '/opt/containers/pihole/copine-pihole01/etc-files/hosts:/etc/hosts'
+      #- '/opt/containers/pihole/copine-pihole01/etc-files/resolv.conf:/etc/resolv.conf'
+      - '/opt/containers/pihole/copine-pihole01/etc-pihole:/etc/pihole'
+      - '/opt/containers/pihole/copine-pihole01/etc-dnsmasq.d:/etc/dnsmasq.d'
+    #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+    cap_add:
+      - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
+    restart: unless-stopped

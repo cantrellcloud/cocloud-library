@@ -1,0 +1,15 @@
+#IP Watch Config File
+sender=COTPA-NAS01 Alert Notifications
+sender_email=charles.cantrelljr@outlook.com
+sender_username=charles.cantrelljr@outlook.com
+sender_password=rcbgpncjzflwkofx
+receiver=Ron Cantrell
+receiver_email=ron@cantrelloffice.cloud
+subject_line=COTPA-GATEWAY IP has Changed!
+machine=COTPA-NAS01
+smtp_addr=smtp.office365.com:587
+save_ip_path=/volume3/ipwatch/old_external_ip.log
+save_log_path=/volume3/ipwatch/httptrigger.log
+named_location=COCloud-8811PrattDr34654
+try_count=10
+ip_blacklist=192.168.0.255,192.168.0.1,192.168.1.255,192.168.1.1

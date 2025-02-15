@@ -1,0 +1,23 @@
+<Settings>
+  <appSettings>
+    <DomainId>jtodev</DomainId>
+    <user>jtodev.glbda</user>
+    <OUGroup>JTODEV</OUGroup>
+	<OUSubGroup1>Groups</OUSubGroup1>
+		<OUSubGroup11>AdminGroups</OUSubGroup11>
+		<OUSubGroup12>UserGroups</OUSubGroup12>
+	<OUSubGroup2>Machines</OUSubGroup2>
+		<OUSubGroup21>Servers</OUSubGroup21>
+		<OUSubGroup22>Storage</OUSubGroup22>
+		<OUSubGroup23>Workstations</OUSubGroup23>
+			<OUSubGroup231>AzureVDI</OUSubGroup231>
+			<OUSubGroup232>OnPremise</OUSubGroup232>
+				<OUSubGroup2321>SeamlessSSO</OUSubGroup2321>
+	<OUSubGroup3>People</OUSubGroup3>
+		<OUSubGroup31>Administrators</OUSubGroup31>
+		<OUSubGroup32>AzureServices</OUSubGroup32>
+		<OUSubGroup33>Contacts</OUSubGroup33>
+		<OUSubGroup34>Services</OUSubGroup34>
+		<OUSubGroup35>Users</OUSubGroup35>
+    </appSettings>
+</Settings>
