@@ -1,0 +1,13 @@
+templateOids:
+  - template: "COCloudUserDocumentSigning"
+    - "1.3.6.1.4.1.44986.2.1.0"
+  - template: "COCloudUserEmailEncryption"
+    - "1.3.6.1.4.1.44986.2.1.2"
+  - template: "COCloudUserPIV/VPNAuthentication"
+    - "1.3.6.1.4.1.44986.2.1.1"
+  - template: "DomainControllerAuthentication(Kerberos)"
+  - template: "KeyRecoveryAgentCOCLOUD"
+  - template: "SubCA"
+    -
+  - template: "WebServerAuthentication"
+  - template: "WorkstationClientAuthentication"

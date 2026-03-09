@@ -1,0 +1,33 @@
+templates:
+  - name: "COCloudUserDocumentSigning"
+    displayName: "COCloud User Document Signing"
+    oid: "1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.13048710.6588701"
+    schemaVersion: 2
+  - name: "COCloudUserEmailEncryption"
+    displayName: "COCloud User Email Encryption"
+    oid: "1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.10057763.13650726"
+    schemaVersion: 2
+  - name: "COCloudUserPIV/VPNAuthentication"
+    displayName: "COCloud User PIV/VPN Authentication"
+    oid: "1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.7934337.8648582"
+    schemaVersion: 2
+  - name: "DomainControllerAuthentication(Kerberos)"
+    displayName: "Domain Controller Authentication (Kerberos)"
+    oid: "1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.15651846.206534"
+    schemaVersion: 3
+  - name: "KeyRecoveryAgentCOCLOUD"
+    displayName: "Key Recovery Agent COCLOUD"
+    oid: "1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.176025.16596063"
+    schemaVersion: 2
+  - name: "SubCA"
+    displayName: "Subordinate Certification Authority"
+    oid: "1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.1.18"
+    schemaVersion: 1
+  - name: "WebServerAuthentication"
+    displayName: "Web Server Authentication"
+    oid: "1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.12785188.12748286"
+    schemaVersion: 2
+  - name: "WorkstationClientAuthentication"
+    displayName: "Workstation Client Authentication"
+    oid: "1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.11582047.8496478"
+    schemaVersion: 2
