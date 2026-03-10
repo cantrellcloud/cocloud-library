@@ -1,0 +1,324 @@
+dn: CN=SubCA,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cantrelloffice,DC=cloud
+changetype: add
+objectClass: top
+objectClass: pKICertificateTemplate
+cn: SubCA
+distinguishedName: 
+ CN=SubCA,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Config
+ uration,DC=cantrelloffice,DC=cloud
+instanceType: 4
+whenCreated: 20200509055919.0Z
+whenChanged: 20240816031918.0Z
+displayName: Subordinate Certification Authority
+uSNCreated: 7755
+uSNChanged: 7755
+showInAdvancedViewOnly: TRUE
+name: SubCA
+objectGUID:: ALXVFFjjREyaJT+4mR361g==
+flags: 66257
+revision: 5
+objectCategory: 
+ CN=PKI-Certificate-Template,CN=Schema,CN=Configuration,DC=cantrelloffice,DC=cl
+ oud
+pKIDefaultKeySpec: 2
+pKIKeyUsage:: hgA=
+pKIMaxIssuingDepth: -1
+pKICriticalExtensions: 2.5.29.15
+pKICriticalExtensions: 2.5.29.19
+pKIExpirationPeriod:: AEAepOhl+v8=
+pKIOverlapPeriod:: AICmCv/e//8=
+pKIDefaultCSPs: 1,Microsoft Enhanced Cryptographic Provider v1.0
+dSCorePropagationData: 16010101000000.0Z
+msPKI-RA-Signature: 0
+msPKI-Enrollment-Flag: 0
+msPKI-Private-Key-Flag: 16
+msPKI-Certificate-Name-Flag: 1
+msPKI-Minimal-Key-Size: 2048
+msPKI-Template-Schema-Version: 1
+msPKI-Template-Minor-Revision: 1
+msPKI-Cert-Template-OID: 
+ 1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.1.18
+
+dn: CN=KeyRecoveryAgentCOCLOUD,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cantrelloffice,DC=cloud
+changetype: add
+objectClass: top
+objectClass: pKICertificateTemplate
+cn: KeyRecoveryAgentCOCLOUD
+distinguishedName: 
+ CN=KeyRecoveryAgentCOCLOUD,CN=Certificate Templates,CN=Public Key Services,CN=
+ Services,CN=Configuration,DC=cantrelloffice,DC=cloud
+instanceType: 4
+whenCreated: 20200509163746.0Z
+whenChanged: 20240816031918.0Z
+displayName: Key Recovery Agent COCLOUD
+uSNCreated: 7801
+uSNChanged: 7801
+showInAdvancedViewOnly: TRUE
+name: KeyRecoveryAgentCOCLOUD
+objectGUID:: hGIMip8eUE+fQXEX6rsDPA==
+flags: 131104
+revision: 100
+objectCategory: 
+ CN=PKI-Certificate-Template,CN=Schema,CN=Configuration,DC=cantrelloffice,DC=cl
+ oud
+pKIDefaultKeySpec: 1
+pKIKeyUsage:: IAA=
+pKIMaxIssuingDepth: 0
+pKICriticalExtensions: 2.5.29.15
+pKIExpirationPeriod:: AIA8SNHL9P8=
+pKIOverlapPeriod:: AICmCv/e//8=
+pKIExtendedKeyUsage: 1.3.6.1.4.1.311.21.6
+pKIDefaultCSPs: 1,Microsoft Enhanced Cryptographic Provider v1.0
+dSCorePropagationData: 16010101000000.0Z
+msPKI-RA-Signature: 0
+msPKI-Enrollment-Flag: 39
+msPKI-Private-Key-Flag: 16842768
+msPKI-Certificate-Name-Flag: -2113929216
+msPKI-Minimal-Key-Size: 2048
+msPKI-Template-Schema-Version: 2
+msPKI-Template-Minor-Revision: 11
+msPKI-Cert-Template-OID: 
+ 1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.176025.1659
+ 6063
+msPKI-Supersede-Templates: KeyRecoveryAgent
+msPKI-Certificate-Application-Policy: 1.3.6.1.4.1.311.21.6
+
+dn: CN=WebServerAuthentication,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cantrelloffice,DC=cloud
+changetype: add
+objectClass: top
+objectClass: pKICertificateTemplate
+cn: WebServerAuthentication
+distinguishedName: 
+ CN=WebServerAuthentication,CN=Certificate Templates,CN=Public Key Services,CN=
+ Services,CN=Configuration,DC=cantrelloffice,DC=cloud
+instanceType: 4
+whenCreated: 20200622133034.0Z
+whenChanged: 20260129001141.0Z
+displayName: Web Server Authentication
+uSNCreated: 7863
+uSNChanged: 1768627
+showInAdvancedViewOnly: TRUE
+name: WebServerAuthentication
+objectGUID:: vNqJLu6fk0ShkVrw/NwB4Q==
+flags: 131649
+revision: 100
+objectCategory: 
+ CN=PKI-Certificate-Template,CN=Schema,CN=Configuration,DC=cantrelloffice,DC=cl
+ oud
+pKIDefaultKeySpec: 1
+pKIKeyUsage:: sA==
+pKIMaxIssuingDepth: 0
+pKICriticalExtensions: 2.5.29.15
+pKIExpirationPeriod:: AIByDl3C/f8=
+pKIOverlapPeriod:: AICmCv/e//8=
+pKIExtendedKeyUsage: 1.3.6.1.5.5.7.3.1
+pKIDefaultCSPs: 2,Microsoft DH SChannel Cryptographic Provider
+pKIDefaultCSPs: 1,Microsoft RSA SChannel Cryptographic Provider
+dSCorePropagationData: 16010101000000.0Z
+msPKI-RA-Signature: 0
+msPKI-Enrollment-Flag: 0
+msPKI-Private-Key-Flag: 50528528
+msPKI-Certificate-Name-Flag: 1
+msPKI-Minimal-Key-Size: 2048
+msPKI-Template-Schema-Version: 2
+msPKI-Template-Minor-Revision: 16
+msPKI-Cert-Template-OID: 
+ 1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.12785188.12
+ 748286
+msPKI-Supersede-Templates: WebServer
+msPKI-Certificate-Application-Policy: 1.3.6.1.5.5.7.3.1
+
+dn: CN=COCloudUserDocumentSigning,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cantrelloffice,DC=cloud
+changetype: add
+objectClass: top
+objectClass: pKICertificateTemplate
+cn: COCloudUserDocumentSigning
+distinguishedName: 
+ CN=COCloudUserDocumentSigning,CN=Certificate Templates,CN=Public Key Services,
+ CN=Services,CN=Configuration,DC=cantrelloffice,DC=cloud
+instanceType: 4
+whenCreated: 20221011180644.0Z
+whenChanged: 20260129001141.0Z
+displayName: COCloud User Document Signing
+uSNCreated: 7817
+uSNChanged: 1768625
+showInAdvancedViewOnly: TRUE
+name: COCloudUserDocumentSigning
+objectGUID:: x+rvuKQI6EyYivQpElHmNg==
+flags: 131618
+revision: 100
+objectCategory: 
+ CN=PKI-Certificate-Template,CN=Schema,CN=Configuration,DC=cantrelloffice,DC=cl
+ oud
+pKIDefaultKeySpec: 1
+pKIKeyUsage:: 4A==
+pKIMaxIssuingDepth: 0
+pKICriticalExtensions: 2.5.29.15
+pKIExpirationPeriod:: AIByDl3C/f8=
+pKIOverlapPeriod:: AICmCv/e//8=
+pKIExtendedKeyUsage: 1.3.6.1.5.5.7.3.4
+pKIExtendedKeyUsage: 1.3.6.1.4.1.44986.2.1.0
+pKIExtendedKeyUsage: 1.3.6.1.4.1.311.10.3.12
+pKIExtendedKeyUsage: 1.2.840.113583.1.1.5
+pKIDefaultCSPs: 1,Microsoft Enhanced Cryptographic Provider v1.0
+dSCorePropagationData: 16010101000000.0Z
+msPKI-RA-Signature: 0
+msPKI-Enrollment-Flag: 299
+msPKI-Private-Key-Flag: 16842752
+msPKI-Certificate-Name-Flag: -1543503872
+msPKI-Minimal-Key-Size: 2048
+msPKI-Template-Schema-Version: 2
+msPKI-Template-Minor-Revision: 6
+msPKI-Cert-Template-OID: 
+ 1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.13048710.65
+ 88701
+msPKI-Certificate-Application-Policy: 1.3.6.1.5.5.7.3.4
+msPKI-Certificate-Application-Policy: 1.3.6.1.4.1.44986.2.1.0
+msPKI-Certificate-Application-Policy: 1.3.6.1.4.1.311.10.3.12
+msPKI-Certificate-Application-Policy: 1.2.840.113583.1.1.5
+
+dn: CN=COCloudUserEmailEncryption,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cantrelloffice,DC=cloud
+changetype: add
+objectClass: top
+objectClass: pKICertificateTemplate
+cn: COCloudUserEmailEncryption
+distinguishedName: 
+ CN=COCloudUserEmailEncryption,CN=Certificate Templates,CN=Public Key Services,
+ CN=Services,CN=Configuration,DC=cantrelloffice,DC=cloud
+instanceType: 4
+whenCreated: 20221011181706.0Z
+whenChanged: 20260129001141.0Z
+displayName: COCloud User Email Encryption
+uSNCreated: 7818
+uSNChanged: 1768624
+showInAdvancedViewOnly: TRUE
+name: COCloudUserEmailEncryption
+objectGUID:: a1J+WXWd8UuwvaGDzsg+ag==
+flags: 131642
+revision: 100
+objectCategory: 
+ CN=PKI-Certificate-Template,CN=Schema,CN=Configuration,DC=cantrelloffice,DC=cl
+ oud
+pKIDefaultKeySpec: 1
+pKIKeyUsage:: oAA=
+pKIMaxIssuingDepth: 0
+pKICriticalExtensions: 2.5.29.15
+pKIExpirationPeriod:: AIByDl3C/f8=
+pKIOverlapPeriod:: AICmCv/e//8=
+pKIExtendedKeyUsage: 1.3.6.1.4.1.44986.2.1.2
+pKIExtendedKeyUsage: 1.3.6.1.5.5.7.3.4
+pKIExtendedKeyUsage: 1.3.6.1.5.5.7.3.2
+pKIDefaultCSPs: 1,Microsoft Enhanced Cryptographic Provider v1.0
+dSCorePropagationData: 16010101000000.0Z
+msPKI-RA-Signature: 0
+msPKI-Enrollment-Flag: 298
+msPKI-Private-Key-Flag: 16842752
+msPKI-Certificate-Name-Flag: -1543503872
+msPKI-Minimal-Key-Size: 2048
+msPKI-Template-Schema-Version: 2
+msPKI-Template-Minor-Revision: 4
+msPKI-Cert-Template-OID: 
+ 1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.10057763.13
+ 650726
+msPKI-Certificate-Application-Policy: 1.3.6.1.4.1.44986.2.1.2
+msPKI-Certificate-Application-Policy: 1.3.6.1.5.5.7.3.4
+msPKI-Certificate-Application-Policy: 1.3.6.1.5.5.7.3.2
+
+dn: CN=WorkstationClientAuthentication,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cantrelloffice,DC=cloud
+changetype: add
+objectClass: top
+objectClass: pKICertificateTemplate
+cn: WorkstationClientAuthentication
+distinguishedName: 
+ CN=WorkstationClientAuthentication,CN=Certificate Templates,CN=Public Key Serv
+ ices,CN=Services,CN=Configuration,DC=cantrelloffice,DC=cloud
+instanceType: 4
+whenCreated: 20200622132152.0Z
+whenChanged: 20260129001141.0Z
+displayName: Workstation Client Authentication
+uSNCreated: 7795
+uSNChanged: 1768626
+showInAdvancedViewOnly: TRUE
+name: WorkstationClientAuthentication
+objectGUID:: VwJ5RHvbEkmU0rMqTxZsEg==
+flags: 131680
+revision: 100
+objectCategory: 
+ CN=PKI-Certificate-Template,CN=Schema,CN=Configuration,DC=cantrelloffice,DC=cl
+ oud
+pKIDefaultKeySpec: 1
+pKIKeyUsage:: sA==
+pKIMaxIssuingDepth: 0
+pKICriticalExtensions: 2.5.29.7
+pKICriticalExtensions: 2.5.29.15
+pKIExpirationPeriod:: AIByDl3C/f8=
+pKIOverlapPeriod:: AICmCv/e//8=
+pKIExtendedKeyUsage: 1.3.6.1.5.5.7.3.2
+pKIDefaultCSPs: 1,Microsoft RSA SChannel Cryptographic Provider
+dSCorePropagationData: 16010101000000.0Z
+msPKI-RA-Signature: 0
+msPKI-Enrollment-Flag: 32
+msPKI-Private-Key-Flag: 50528257
+msPKI-Certificate-Name-Flag: 134217728
+msPKI-Minimal-Key-Size: 4096
+msPKI-Template-Schema-Version: 2
+msPKI-Template-Minor-Revision: 13
+msPKI-Cert-Template-OID: 
+ 1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.11582047.84
+ 96478
+msPKI-Supersede-Templates: Workstation
+msPKI-Certificate-Application-Policy: 1.3.6.1.5.5.7.3.2
+
+dn: CN=COCloudUserPIV/VPNAuthentication,CN=Certificate Templates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cantrelloffice,DC=cloud
+changetype: add
+objectClass: top
+objectClass: pKICertificateTemplate
+cn: COCloudUserPIV/VPNAuthentication
+distinguishedName: 
+ CN=COCloudUserPIV/VPNAuthentication,CN=Certificate Templates,CN=Public Key Ser
+ vices,CN=Services,CN=Configuration,DC=cantrelloffice,DC=cloud
+instanceType: 4
+whenCreated: 20221011175910.0Z
+whenChanged: 20260128211144.0Z
+displayName: COCloud User PIV/VPN Authentication
+uSNCreated: 7814
+uSNChanged: 1768371
+showInAdvancedViewOnly: TRUE
+name: COCloudUserPIV/VPNAuthentication
+objectGUID:: syDtfT/y7EmYfu1hV+cRHw==
+flags: 131642
+revision: 100
+objectCategory: 
+ CN=PKI-Certificate-Template,CN=Schema,CN=Configuration,DC=cantrelloffice,DC=cl
+ oud
+pKIDefaultKeySpec: 1
+pKIKeyUsage:: sA==
+pKIMaxIssuingDepth: 0
+pKICriticalExtensions: 2.5.29.15
+pKIExpirationPeriod:: AIByDl3C/f8=
+pKIOverlapPeriod:: AICmCv/e//8=
+pKIExtendedKeyUsage: 1.3.6.1.4.1.311.20.2.2
+pKIExtendedKeyUsage: 1.3.6.1.5.5.7.3.21
+pKIExtendedKeyUsage: 1.3.6.1.4.1.44986.2.1.1
+pKIExtendedKeyUsage: 1.3.6.1.5.2.3.4
+pKIExtendedKeyUsage: 1.3.6.1.4.1.311.10.3.4
+pKIExtendedKeyUsage: 1.3.6.1.5.5.7.3.2
+pKIDefaultCSPs: 1,Microsoft Enhanced Cryptographic Provider v1.0
+dSCorePropagationData: 16010101000000.0Z
+msPKI-RA-Signature: 0
+msPKI-Enrollment-Flag: 43
+msPKI-Private-Key-Flag: 16842752
+msPKI-Certificate-Name-Flag: -1509949440
+msPKI-Minimal-Key-Size: 2048
+msPKI-Template-Schema-Version: 2
+msPKI-Template-Minor-Revision: 4
+msPKI-Cert-Template-OID: 
+ 1.3.6.1.4.1.311.21.8.14486756.8792110.5786008.13147812.10878264.27.7934337.864
+ 8582
+msPKI-Certificate-Application-Policy: 1.3.6.1.4.1.311.20.2.2
+msPKI-Certificate-Application-Policy: 1.3.6.1.5.5.7.3.21
+msPKI-Certificate-Application-Policy: 1.3.6.1.4.1.44986.2.1.1
+msPKI-Certificate-Application-Policy: 1.3.6.1.5.2.3.4
+msPKI-Certificate-Application-Policy: 1.3.6.1.4.1.311.10.3.4
+msPKI-Certificate-Application-Policy: 1.3.6.1.5.5.7.3.2
+

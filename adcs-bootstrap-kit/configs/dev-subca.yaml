@@ -1,0 +1,42 @@
+ca:
+  type: EnterpriseSubordinateCA
+  commonName: "DEV-SUBCA01"
+  cryptoProviderName: "RSA#Microsoft Software Key Storage Provider"
+  keyLength: 3072
+  hashAlgorithmName: "SHA256"
+  databaseDirectory: "C:\ProgramData\ADCS\DB"
+  logDirectory: "C:\ProgramData\ADCS\Log"
+  outputCertRequestFile: "C:\ProgramData\ADCS\Requests\DEV-SUBCA01.req"
+  webEnrollment: true
+
+capolicy:
+  policyName: "CCES_DEV_SubCA_Policy"
+  policyOid: "1.3.6.1.4.1.65283.1.1.10.1.2"
+  notice: "Cantrell Cloud ES - dev.local subordinate CA policy"
+  distribution:
+    httpBaseUrl: "http://pki.dev.local/pki"
+    includeLdap: true
+    publishToShare: true
+    pkiShare:
+      host: "losubca001"
+      name: "pki"
+      localPath: "C:\ProgramData\PKI"
+  crl:
+    period: "Weeks"
+    units: 1
+    overlapPeriod: "Days"
+    overlapUnits: 2
+
+directory:
+  createDirectoryObjects: true
+  publishTemplates: true
+  oids:
+    ldfPath: ".\inputs\cantrelloffice.cloud-oids.ldf"
+  templates:
+    ldfPath: ".\inputs\cantrelloffice.cloud-templates.ldf"
+    issueTemplates:
+      - "WebServerAuthentication"
+      - "WorkstationClientAuthentication"
+      - "COCloudUserEmailEncryption"
+      - "COCloudUserDocumentSigning"
+      - "COCloudUserPIV/VPNAuthentication"

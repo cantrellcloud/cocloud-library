@@ -1,0 +1,35 @@
+ca:
+  type: StandaloneRootCA
+  commonName: "DEV-OFFLINE-ROOTCA"
+  distinguishedNameSuffix: "O=Cantrell Cloud ES,OU=Lab PKI,C=US"
+  cryptoProviderName: "RSA#Microsoft Software Key Storage Provider"
+  keyLength: 4096
+  hashAlgorithmName: "SHA256"
+  validityPeriod: "Years"
+  validityPeriodUnits: 20
+  databaseDirectory: "C:\ProgramData\ADCS\DB"
+  logDirectory: "C:\ProgramData\ADCS\Log"
+  webEnrollment: false
+  loadDefaultTemplates: 0
+
+capolicy:
+  policyName: "CCES_DEV_OfflineRoot_Policy"
+  policyOid: "1.3.6.1.4.1.65283.1.1.10.1.1"
+  notice: "Cantrell Cloud ES - dev.local offline root policy"
+  distribution:
+    httpBaseUrl: "http://pki.dev.local/pki"
+    includeLdap: false
+    publishToShare: false
+    pkiShare:
+      host: "losubca001"
+      name: "pki"
+      localPath: "C:\ProgramData\PKI"
+  crl:
+    period: "Weeks"
+    units: 26
+    overlapPeriod: "Days"
+    overlapUnits: 7
+
+directory:
+  createDirectoryObjects: false
+  publishTemplates: false

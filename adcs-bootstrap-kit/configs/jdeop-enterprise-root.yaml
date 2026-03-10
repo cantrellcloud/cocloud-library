@@ -1,0 +1,41 @@
+ca:
+  type: EnterpriseRootCA
+  commonName: "JDEOP-ROOTCA"
+  cryptoProviderName: "RSA#Microsoft Software Key Storage Provider"
+  keyLength: 4096
+  hashAlgorithmName: "SHA256"
+  validityPeriod: "Years"
+  validityPeriodUnits: 10
+  databaseDirectory: "C:\ProgramData\ADCS\DB"
+  logDirectory: "C:\ProgramData\ADCS\Log"
+  loadDefaultTemplates: 0
+  webEnrollment: true
+
+capolicy:
+  policyName: "CCES_JDEOP_EnterpriseRoot_Policy"
+  policyOid: "1.3.6.1.4.1.65283.1.1.10.3.10"
+  notice: "Cantrell Cloud ES - jdeop.op enterprise root policy"
+  distribution:
+    httpBaseUrl: "http://pki.jdeop.op/pki"
+    includeLdap: true
+    publishToShare: true
+    pkiShare:
+      host: "oprootca001"
+      name: "pki"
+      localPath: "C:\ProgramData\PKI"
+  crl:
+    period: "Weeks"
+    units: 1
+    overlapPeriod: "Days"
+    overlapUnits: 2
+
+directory:
+  createDirectoryObjects: true
+  publishTemplates: true
+  oids:
+    ldfPath: ".\inputs\cantrelloffice.cloud-oids.ldf"
+  templates:
+    ldfPath: ".\inputs\cantrelloffice.cloud-templates.ldf"
+    issueTemplates:
+      - "WebServerAuthentication"
+      - "WorkstationClientAuthentication"
